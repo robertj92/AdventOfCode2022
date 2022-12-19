@@ -8,5 +8,8 @@ public class Day3Main {
         RucksackItemSorter rucksackItemSorter = new RucksackItemSorter();
         String input = FileUtils.readFileFromString("day3/input.txt");
         System.out.printf("Priorities are %s%n", rucksackItemSorter.prioritizeMisplacedItems(input));
+
+        RucksackItemSorterPartTwo rucksackItemSorterPartTwo = new RucksackItemSorterPartTwo();
+        System.out.printf("Priorities in Part Two are %s%n", rucksackItemSorterPartTwo.prioritizeMisplacedItems(input));
     }
 }

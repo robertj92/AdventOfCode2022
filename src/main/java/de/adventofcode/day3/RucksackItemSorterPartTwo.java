@@ -11,9 +11,9 @@ public class RucksackItemSorterPartTwo {
         List<String> rucksacks = input.lines().toList();
 
         List<Integer> results = new ArrayList<>();
-        for (int rucksackCounter = 0; rucksackCounter < rucksacks.size(); rucksackCounter++) {
-            if (rucksackCounter != 0 && rucksackCounter % 3 == 0) {
-                Integer result = calculateMisplacedItemsPrioritiesInRucksack(rucksacks.get(rucksackCounter-2), rucksacks.get(rucksackCounter-1), rucksacks.get(rucksackCounter));
+        for (int rucksackCounter = 1; rucksackCounter <= rucksacks.size(); rucksackCounter++) {
+            if (rucksackCounter % 3 == 0) {
+                Integer result = calculateMisplacedItemsPrioritiesInRucksack(rucksacks.get(rucksackCounter-3), rucksacks.get(rucksackCounter-2), rucksacks.get(rucksackCounter-1));
                 results.add(result);
             }
         }
